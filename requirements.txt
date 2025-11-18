@@ -1,3 +1,9 @@
 streamlit
 groq
 typing_extensions
+streamlit
+numpy
+pandas
+scikit-learn
+plotly
+hdbscan
