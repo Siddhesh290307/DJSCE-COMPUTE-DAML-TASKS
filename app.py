@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 import plotly.express as px
 import streamlit as st
-# import hdbscan  
+import hdbscan  
 
 #Generating dataset
 def generate_dataset(dataset_type, n_samples, n_features=2, n_clusters_true=3, noise=0.1):
@@ -48,8 +48,8 @@ def cluster_and_plot(dataset_type, n_samples, scaler_option, algorithm,
         model = DBSCAN(eps=eps, min_samples=min_samples)
     elif algorithm == "Agglomerative":
         model = AgglomerativeClustering(n_clusters=n_clusters, linkage=linkage)
-    # elif algorithm == "HDBSCAN":
-    #     model = hdbscan.HDBSCAN(min_cluster_size=min_cluster_size)
+    elif algorithm == "HDBSCAN":
+        model = hdbscan.HDBSCAN(min_cluster_size=min_cluster_size)
 
     # Fit model
     labels = model.fit_predict(X_scaled)
