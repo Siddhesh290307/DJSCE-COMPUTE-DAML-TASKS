@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 import plotly.express as px
 import streamlit as st
-# import hdbscan  # Uncomment if you’ve installed it properly
+# import hdbscan  
 
 #Generating dataset
 def generate_dataset(dataset_type, n_samples, n_features=2, n_clusters_true=3, noise=0.1):
